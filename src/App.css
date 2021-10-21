@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,600&display=swap');
+
+.homepage-grid {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 8vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.grid {
+  padding: 10px;
+  width: 80vw;
+  height: 98vh;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-gap: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cell {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+/* .box-one {
+  grid-area: 1 / 1 / span 1 / span 1;
+  background-color: white;
+} */
+
+.box-two {
+  grid-area: 1 / 1 / span 12 / span 1;
+  background-color: #ff4037;
+}
+
+.box-three {
+  grid-area: 1 / 2 / span 3 / span 4;
+  background-color: pink;
+}
+
+.box-four {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: 4 / 2 / span 4 / span 4;
+  background-color: white;
+}
+.box-five {
+  grid-area: 1 / 6 / span 6 / span 7;
+  background-color: lightcoral;
+}
+
+.box-six {
+  grid-area: 7 / 6 / span 1 / span 7;
+}
+
+/* marquee text styles */
+
+.vertical {
+  -ms-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -ms-transform-origin: right top 0;
+  -moz-transform-origin: right top 0;
+  -webkit-transform-origin: right top 0;
+  transform-origin: right top 0;
+  right: 99.5%;
   color: white;
+  white-space: nowrap;
+  text-transform: uppercase;
+  cursor: vertical-text;
+  position: absolute;
+  display: block;
+  width: 100%;
+  direction: rtl;
+  z-index: 11;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes moveDown {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1500vh);
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.animation {
+  animation: 150s infinite moveDown;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.animation h1 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: white;
+  -webkit-text-fill-color: #ff4037; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+  font-size: 3em;
 }
