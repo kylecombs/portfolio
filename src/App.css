@@ -1,4 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Syne:wght@700&display=swap');
+
+h1,
+h2,
+h3 {
+  font-family: 'Roboto', sans-serif;
+}
+
+h2,
+h3 {
+  color: gray;
+}
+
+hr {
+  height: 1px;
+  background-color: gray;
+  border: none;
+}
 
 .homepage-grid {
   display: grid;
@@ -30,13 +49,16 @@
 } */
 
 .box-two {
-  grid-area: 1 / 1 / span 12 / span 1;
+  grid-area: 1 / 1 / span 13 / span 1;
   background-color: #ff4037;
 }
 
 .box-three {
   grid-area: 1 / 2 / span 3 / span 4;
-  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #262d88;
 }
 
 .box-four {
@@ -52,7 +74,10 @@
 }
 
 .box-six {
-  grid-area: 7 / 6 / span 1 / span 7;
+  display: grid;
+  grid-template-columns: repeat(25, 1fr);
+  grid-template-rows: 1fr;
+  grid-area: 7 / 6 / span 2 / span 7;
 }
 
 /* marquee text styles */
@@ -66,7 +91,7 @@
   -moz-transform-origin: right top 0;
   -webkit-transform-origin: right top 0;
   transform-origin: right top 0;
-  right: 99.5%;
+  right: 101.25%;
   color: white;
   white-space: nowrap;
   text-transform: uppercase;
@@ -101,5 +126,15 @@
   -webkit-text-fill-color: #ff4037; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: white;
-  font-size: 3em;
+  font-size: 4vw;
+}
+
+.project-div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.green {
+  color: green;
 }
