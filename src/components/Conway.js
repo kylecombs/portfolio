@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef } from 'react';
+import React, { useState, useCallback, useRef, useEffect } from 'react';
 import produce from 'immer';
 
 const numRows = 14;
@@ -21,6 +21,14 @@ const generateEmptyGrid = () => {
     rows.push(Array.from(Array(numCols), () => 0));
   }
 
+  return rows;
+};
+
+const randomGrid = () => {
+  const rows = [];
+  for (let i = 0; i < numRows; i++) {
+    rows.push(Array.from(Array(numCols), () => (Math.random() > 0.7 ? 1 : 0)));
+  }
   return rows;
 };
 
@@ -64,6 +72,20 @@ const Conway = () => {
 
     setTimeout(runSimulation, 100);
   }, []);
+
+  useEffect(() => {
+    setGrid(randomGrid());
+    setRunning(true);
+    runningRef.current = true;
+    runSimulation();
+  }, [runSimulation]);
+
+  const fillCell = (row, column) => {
+    const newGrid = produce(grid, (gridCopy) => {
+      gridCopy[row][column] = grid[row][column] ? 0 : 1;
+    });
+    setGrid(newGrid);
+  }}
 
   return (
     <div style={{ gridArea: '1 / 10 / span 1 / span 16' }}>
@@ -119,7 +141,7 @@ const Conway = () => {
                 width: '1vw',
                 height: '1vw',
                 backgroundColor: grid[i][k] ? '#612cdd' : undefined,
-                border: 'solid 1px #42296d',
+                // border: 'solid 1px #42296d',
               }}
             ></div>
           ))

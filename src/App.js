@@ -10,10 +10,7 @@ const App = () => {
   const [parentHeight, setHeight] = useState(0);
   const [parentWidth, setWidth] = useState(0);
 
-  // const size = useWindowSize();
   const parentRef = useRef(null);
-
-  // console.log('size', size);
 
   const getSize = () => {
     if (parentRef.current) {
@@ -71,7 +68,6 @@ const App = () => {
             style={{
               gridArea: '1 / 1 / span 4 / span 3',
               // objectFit: 'cover',
-              width: '100%',
               maxHeight: '100%',
             }}
           />
