@@ -2,7 +2,7 @@ import React, { useState, useCallback, useRef, useEffect } from 'react';
 import produce from 'immer';
 
 const numRows = 14;
-const numCols = 37;
+const numCols = 42;
 
 const operations = [
   [0, 1],
@@ -70,7 +70,7 @@ const Conway = () => {
       });
     });
 
-    setTimeout(runSimulation, 100);
+    setTimeout(runSimulation, 200);
   }, []);
 
   useEffect(() => {
@@ -79,13 +79,6 @@ const Conway = () => {
     runningRef.current = true;
     runSimulation();
   }, [runSimulation]);
-
-  const fillCell = (row, column) => {
-    const newGrid = produce(grid, (gridCopy) => {
-      gridCopy[row][column] = grid[row][column] ? 0 : 1;
-    });
-    setGrid(newGrid);
-  }}
 
   return (
     <div style={{ gridArea: '1 / 10 / span 1 / span 16' }}>
@@ -131,7 +124,7 @@ const Conway = () => {
           rows.map((col, k) => (
             <div
               key={`${i}-${k}`}
-              onClick={() => {
+              onMouseEnter={() => {
                 const newGrid = produce(grid, (gridCopy) => {
                   gridCopy[i][k] = grid[i][k] ? 0 : 1;
                 });

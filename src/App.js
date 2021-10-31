@@ -1,16 +1,20 @@
 import React, { Fragment, useRef, useEffect, useState } from 'react';
 import { Sphere } from './components/Sphere.js';
+import Cursor from './components/Cursor';
 import Marquee from './components/Marquee.js';
 import Blob from './components/Blob.js';
 import Conway from './components/Conway.js';
+import EraseReveal from './components/EraseReveal.js';
 
 import './App.css';
 
 const App = () => {
   const [parentHeight, setHeight] = useState(0);
   const [parentWidth, setWidth] = useState(0);
+  const [contactHover, setContactHover] = useState(false);
 
   const parentRef = useRef(null);
+  const eraseRevealParentRef = useRef(null);
 
   const getSize = () => {
     if (parentRef.current) {
@@ -35,14 +39,26 @@ const App = () => {
 
   return (
     <Fragment>
+      <Cursor />
       <div className="homepage-grid">
         {/* <div className="box-one"></div> */}
         <div className="box-two">
           <Marquee />
         </div>
-        <div className="box-three">
-          <h1 style={{ color: '#edeae4', fontFamily: 'Syne, sans-serif' }}>
-            hello@kyle.combs
+        <div
+          className="box-three"
+          onMouseOver={() => setContactHover(true)}
+          onMouseLeave={() => setContactHover(false)}
+        >
+          <h1
+            style={{
+              color: '#edeae4',
+              fontFamily: 'Syne, sans-serif',
+              fontSize: contactHover ? '4vw' : '10vw',
+              cursor: 'pointer',
+            }}
+          >
+            {contactHover ? 'contact me' : '@'}
           </h1>
         </div>
         <div className="box-four">
@@ -52,27 +68,26 @@ const App = () => {
           <Blob height={parentHeight} width={parentWidth} />
         </div>
         <div className="box-six">
-          {/* <div
-            style={{
-              gridArea: 'photo',
-              backgroundImage:
-                'https://images6.fanpop.com/image/photos/37500000/Chi-typing-on-a-computer-chis-sweet-home-chis-new-address-37597964-320-240.gif',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              height: '100%',
-            }}
-          /> */}
           <img
             alt="cat typing gif"
             src="https://images6.fanpop.com/image/photos/37500000/Chi-typing-on-a-computer-chis-sweet-home-chis-new-address-37597964-320-240.gif"
             style={{
               gridArea: '1 / 1 / span 4 / span 3',
-              // objectFit: 'cover',
-              maxHeight: '100%',
+              objectFit: 'cover',
+              width: '100%',
+              height: '100%',
             }}
           />
+        </div>
+        <div className="box-seven">
           <Conway />
         </div>
+        <div className="box-eight" ref={eraseRevealParentRef}>
+          {/* <EraseReveal parentRef={eraseRevealParentRef} /> */}
+        </div>
+        <div className="box-nine"></div>
+        <div className="box-ten"></div>
+        <div className="box-eleven"></div>
       </div>
     </Fragment>
   );

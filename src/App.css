@@ -13,6 +13,10 @@ h3 {
   color: gray;
 }
 
+a {
+  text-decoration: none;
+}
+
 hr {
   height: 1px;
   background-color: gray;
@@ -74,10 +78,33 @@ hr {
 }
 
 .box-six {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(25, 1fr);
-  grid-template-rows: 1fr;
-  grid-area: 7 / 6 / span 2 / span 7;
+  grid-template-rows: 1fr; */
+  grid-area: 7 / 6 / span 2 / span 2;
+}
+
+.box-seven {
+  grid-area: 7 / 8 / span 4 / span 5;
+}
+
+.box-eight {
+  grid-area: 8 / 2 / span 2 / span 4;
+}
+
+.box-nine {
+  background-color: white;
+  grid-area: 10 / 2 / span 4 / span 4;
+}
+
+.box-ten {
+  background-color: white;
+  grid-area: 9 / 6 / span 5 / span 2;
+}
+
+.box-eleven {
+  background-color: white;
+  grid-area: 11 / 8 / span 3 / span 5;
 }
 
 /* marquee text styles */
