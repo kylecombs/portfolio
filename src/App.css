@@ -55,6 +55,7 @@ hr {
 .box-two {
   grid-area: 1 / 1 / span 13 / span 1;
   background-color: #ff4037;
+  z-index: 1;
 }
 
 .box-three {
@@ -71,6 +72,7 @@ hr {
   align-items: center;
   grid-area: 4 / 2 / span 4 / span 4;
   background-color: white;
+  z-index: 1;
 }
 .box-five {
   grid-area: 1 / 6 / span 6 / span 7;
@@ -82,6 +84,7 @@ hr {
   grid-template-columns: repeat(25, 1fr);
   grid-template-rows: 1fr; */
   grid-area: 7 / 6 / span 2 / span 2;
+  z-index: 1;
 }
 
 .box-seven {
@@ -95,11 +98,13 @@ hr {
 .box-nine {
   background-color: white;
   grid-area: 10 / 2 / span 4 / span 4;
+  z-index: 1;
 }
 
 .box-ten {
   background-color: white;
   grid-area: 9 / 6 / span 5 / span 2;
+  z-index: 1;
 }
 
 .box-eleven {
@@ -122,7 +127,7 @@ hr {
   color: white;
   white-space: nowrap;
   text-transform: uppercase;
-  cursor: vertical-text;
+  cursor: default;
   position: absolute;
   display: block;
   width: 100%;

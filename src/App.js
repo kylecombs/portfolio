@@ -5,6 +5,7 @@ import Marquee from './components/Marquee.js';
 import Blob from './components/Blob.js';
 import Conway from './components/Conway.js';
 import EraseReveal from './components/EraseReveal.js';
+import TextReveal from './components/TextReveal';
 
 import './App.css';
 
@@ -39,7 +40,6 @@ const App = () => {
 
   return (
     <Fragment>
-      <Cursor />
       <div className="homepage-grid">
         {/* <div className="box-one"></div> */}
         <div className="box-two">
@@ -83,7 +83,9 @@ const App = () => {
           <Conway />
         </div>
         <div className="box-eight" ref={eraseRevealParentRef}>
+          {/* <Cursor parentRef={eraseRevealParentRef} /> */}
           {/* <EraseReveal parentRef={eraseRevealParentRef} /> */}
+          <TextReveal parentRef={eraseRevealParentRef} />
         </div>
         <div className="box-nine"></div>
         <div className="box-ten"></div>
