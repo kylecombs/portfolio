@@ -6,7 +6,9 @@ const style = {
     position: 'relative',
     width: '100%',
     height: '100%',
-    // backgroundColor: '#595656',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     backgroundImage:
       'url(https://cdn.pixabay.com/photo/2017/08/30/13/16/wave-2697053_960_720.jpg)',
     backgroundSize: 'cover',
@@ -23,15 +25,16 @@ export default function EraseReveal(props) {
       onMouseEnter={() => setCursorVisible(true)}
       onMouseLeave={() => setCursorVisible(false)}
     >
-      {/* <h1
+      <h1
         style={{
           mixBlendMode: 'difference',
           color: '#fff',
-          fontSize: '6vw',
+          fontSize: '8vw',
+          fontFamily: "'Courgette', cursive",
         }}
       >
-        Hello World
-      </h1> */}
+        HIRE ME
+      </h1>
       <Cursor cursorVisible={cursorVisible} />
     </div>
   );
