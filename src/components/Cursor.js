@@ -13,12 +13,10 @@ const Cursor = (props) => {
         right: 0,
         zIndex: 0,
         pointerEvents: 'none',
+        mixBlendMode: 'difference',
       }}
     >
-      <svg
-        width={300}
-        height={300}
-        viewBox="0 0 50 50"
+      <div
         style={{
           display: props.cursorVisible ? 'initial' : 'none',
           zIndex: 0,
@@ -26,11 +24,12 @@ const Cursor = (props) => {
           left: clientX,
           top: clientY,
           transform: 'translate(-50%, -50%)',
-          color: '#dbd9d5',
+          backgroundColor: '#fff',
+          width: '150px',
+          height: '150px',
+          borderRadius: '50%',
         }}
-      >
-        <circle cx="25" cy="25" r="8" fill="currentcolor" />
-      </svg>
+      />
     </div>
   );
 };

@@ -6,11 +6,11 @@ const style = {
     position: 'relative',
     width: '100%',
     height: '100%',
-    backgroundColor: '#e9fd59',
+    backgroundColor: '#000',
   },
   cursor: {
     position: 'absolute',
-    backgroundColor: 'black',
+    backgroundColor: 'white',
     borderRadius: '50%',
     width: '2vw',
     height: '2vw',
