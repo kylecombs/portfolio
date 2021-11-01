@@ -25,8 +25,8 @@ const Cursor = (props) => {
           top: clientY,
           transform: 'translate(-50%, -50%)',
           backgroundColor: '#fff',
-          width: '150px',
-          height: '150px',
+          width: '125px',
+          height: '125px',
           borderRadius: '50%',
         }}
       />

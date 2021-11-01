@@ -1,11 +1,10 @@
 import React, { Fragment, useRef, useEffect, useState } from 'react';
 import { Sphere } from './components/Sphere.js';
-import Cursor from './components/Cursor';
 import Marquee from './components/Marquee.js';
 import Blob from './components/Blob.js';
 import Conway from './components/Conway.js';
-import EraseReveal from './components/EraseReveal.js';
 import TextReveal from './components/TextReveal';
+import RandomChar from './components/RandomChar.js';
 
 import './App.css';
 
@@ -83,12 +82,12 @@ const App = () => {
           <Conway />
         </div>
         <div className="box-eight" ref={eraseRevealParentRef}>
-          {/* <Cursor parentRef={eraseRevealParentRef} /> */}
-          {/* <EraseReveal parentRef={eraseRevealParentRef} /> */}
           <TextReveal parentRef={eraseRevealParentRef} />
         </div>
         <div className="box-nine"></div>
-        <div className="box-ten"></div>
+        <div className="box-ten">
+          <RandomChar />
+        </div>
         <div className="box-eleven"></div>
       </div>
     </Fragment>

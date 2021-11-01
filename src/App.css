@@ -110,8 +110,8 @@ hr {
 }
 
 .box-ten {
-  background-color: white;
-  grid-area: 9 / 6 / span 5 / span 2;
+  background-color: #d6fc52;
+  grid-area: 9 / 6 / span 1 / span 2;
   z-index: 1;
 }
 
