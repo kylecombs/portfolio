@@ -9,8 +9,7 @@ const style = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundImage:
-      'url(https://cdn.pixabay.com/photo/2017/08/30/13/16/wave-2697053_960_720.jpg)',
+    backgroundImage: 'url(./waves.jpeg)',
     backgroundSize: 'cover',
     cursor: 'none',
   },
@@ -33,7 +32,7 @@ export default function EraseReveal(props) {
           fontFamily: "'Courgette', cursive",
         }}
       >
-        HIRE ME
+        {/* HIRE ME */}
       </h1>
       <Cursor cursorVisible={cursorVisible} />
     </div>

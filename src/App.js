@@ -1,6 +1,7 @@
 import React, { Fragment, useRef, useEffect, useState } from 'react';
 import { Sphere } from './components/Sphere.js';
-import Marquee from './components/Marquee.js';
+import SideMarquee from './components/SideMarquee.js';
+import LowerMarquee from './components/LowerMarquee.js';
 import Blob from './components/Blob.js';
 import Conway from './components/Conway.js';
 import TextReveal from './components/TextReveal';
@@ -42,7 +43,7 @@ const App = () => {
       <div className="homepage-grid">
         {/* <div className="box-one"></div> */}
         <div className="box-two">
-          <Marquee />
+          <SideMarquee />
         </div>
         <div
           className="box-three"
@@ -84,11 +85,13 @@ const App = () => {
         <div className="box-eight" ref={eraseRevealParentRef}>
           <TextReveal parentRef={eraseRevealParentRef} />
         </div>
-        <div className="box-nine"></div>
         <div className="box-ten">
           <RandomChar />
         </div>
-        <div className="box-eleven"></div>
+        <div className="box-nine">
+          <LowerMarquee />
+        </div>
+        {/* <div className="box-eleven"></div> */}
       </div>
     </Fragment>
   );

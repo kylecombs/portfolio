@@ -3,11 +3,13 @@ import React from 'react';
 const Marquee = () => {
   return (
     <div className="marquee-container">
-      <div className="vertical">
+      <div className="horizontal scroll">
         <div className="animation">
-          <h1>
+          <h1 id="lower-marquee">
             {Array(50)
-              .fill(' Kyle Combs is a software engineer / musician / designer ')
+              .fill(
+                ' JavaScript, Node, Experss, React, Redux, SQL, PostgreSQL, Sequelize, Git, GitHub, HTML5, CSS3, Mocha, Jasmine, TypeScript,'
+              )
               .join(' ')}
           </h1>
         </div>
