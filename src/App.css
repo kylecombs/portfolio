@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 h1,
@@ -66,7 +66,7 @@ hr {
 } */
 
 .box-two {
-  grid-area: 1 / 1 / span 13 / span 1;
+  grid-area: 1 / 1 / span 10 / span 1;
   background-color: #ff4037;
   z-index: 1;
 }
@@ -110,7 +110,7 @@ hr {
 
 .box-nine {
   background-color: #9668f1;
-  grid-area: 10 / 2 / span 2 / span 11;
+  grid-area: 10 / 2 / span 1 / span 11;
   z-index: 1;
 }
 
@@ -140,17 +140,18 @@ hr {
   color: white;
   text-transform: uppercase;
   cursor: default;
+  width: 80%;
 }
 
 .horizontal {
   cursor: default;
+  width: 100%;
 }
 
 .scroll {
   white-space: nowrap;
   position: absolute;
   display: block;
-  width: 100%;
   direction: rtl;
   z-index: 11;
   overflow: hidden;
@@ -179,8 +180,9 @@ hr {
 }
 
 #lower-marquee {
-  font-size: 5vw;
-  transform: translateY(-5px);
+  font-size: 4vw;
+  transform: translateY(-20px);
+  margin-bottom: 0;
 }
 
 #side-marquee {

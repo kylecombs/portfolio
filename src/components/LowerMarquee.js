@@ -8,7 +8,7 @@ const Marquee = () => {
           <h1 id="lower-marquee">
             {Array(50)
               .fill(
-                ' JavaScript, Node, Experss, React, Redux, SQL, PostgreSQL, Sequelize, Git, GitHub, HTML5, CSS3, Mocha, Jasmine, TypeScript,'
+                ' JavaScript / Node / Express / React / Redux / SQL / PostgreSQL / Sequelize / Git / GitHub / HTML5 / CSS3 / Mocha / Jasmine / TypeScript / '
               )
               .join(' ')}
           </h1>
