@@ -3,7 +3,7 @@ import Sketch from 'react-p5';
 import ProjectList from './ProjectList';
 
 export default function Blob(props) {
-  const [points, setPoints] = useState(500);
+  const [points] = useState(500);
   const [hoverElement, setHoverElement] = useState(null);
   const [p5, setP5] = useState();
   const [height, setHeight] = useState(0);
