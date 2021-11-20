@@ -1,5 +1,6 @@
 import React, { Fragment, useRef, useEffect, useState } from 'react';
 import { Sphere } from './components/Sphere.js';
+import Contact from './components/Contact';
 import SideMarquee from './components/SideMarquee.js';
 import LowerMarquee from './components/LowerMarquee.js';
 import Blob from './components/Blob.js';
@@ -12,7 +13,6 @@ import './App.css';
 const App = () => {
   const [parentHeight, setHeight] = useState(0);
   const [parentWidth, setWidth] = useState(0);
-  const [contactHover, setContactHover] = useState(false);
 
   const parentRef = useRef(null);
   const eraseRevealParentRef = useRef(null);
@@ -45,21 +45,8 @@ const App = () => {
         <div className="box-two">
           <SideMarquee />
         </div>
-        <div
-          className="box-three"
-          onMouseOver={() => setContactHover(true)}
-          onMouseLeave={() => setContactHover(false)}
-        >
-          <h1
-            style={{
-              color: '#edeae4',
-              fontFamily: 'Syne, sans-serif',
-              fontSize: contactHover ? '4vw' : '10vw',
-              cursor: 'pointer',
-            }}
-          >
-            {contactHover ? 'contact me' : '@'}
-          </h1>
+        <div className="box-three">
+          <Contact />
         </div>
         <div className="box-four">
           <Sphere />
