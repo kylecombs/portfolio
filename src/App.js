@@ -25,6 +25,10 @@ const App = () => {
     }
   };
 
+  const randomTime = () => {
+    return Math.random() * 4;
+  };
+
   useEffect(() => {
     getSize();
   }, []);
@@ -43,31 +47,60 @@ const App = () => {
     <Fragment>
       <div className="homepage-grid">
         {/* <div className="box-one"></div> */}
-        <div className="box-two">
+        <div
+          className="box-two"
+          style={{ animation: `${randomTime()}s fadeIn ease` }}
+        >
           <SideMarquee />
         </div>
-        <div className="box-three">
+        <div
+          className="box-three"
+          style={{ animation: `${randomTime()}s fadeIn ease` }}
+        >
           <Contact />
         </div>
-        <div className="box-four">
+        <div
+          className="box-four"
+          style={{ animation: `${randomTime()}s fadeIn ease` }}
+        >
           <Sphere />
         </div>
-        <div className="box-five" ref={parentRef}>
+        <div
+          className="box-five"
+          ref={parentRef}
+          style={{ animation: `${randomTime()}s fadeIn ease` }}
+        >
           <Blob height={parentHeight} width={parentWidth} />
         </div>
-        <div className="box-six">
+        <div
+          className="box-six"
+          style={{ animation: `${randomTime()}s fadeIn ease` }}
+        >
           <Gif />
         </div>
-        <div className="box-seven">
+        <div
+          className="box-seven"
+          style={{ animation: `${randomTime()}s fadeIn ease` }}
+        >
           <Conway />
         </div>
-        <div className="box-eight" ref={eraseRevealParentRef}>
+        <div
+          className="box-eight"
+          ref={eraseRevealParentRef}
+          style={{ animation: `${randomTime()}s fadeIn ease` }}
+        >
           <TextReveal parentRef={eraseRevealParentRef} />
         </div>
-        <div className="box-ten">
+        <div
+          className="box-ten"
+          style={{ animation: `${randomTime()}s fadeIn ease` }}
+        >
           <RandomChar />
         </div>
-        <div className="box-nine">
+        <div
+          className="box-nine"
+          style={{ animation: `${randomTime()}s fadeIn ease` }}
+        >
           <LowerMarquee />
         </div>
         {/* <div className="box-eleven"></div> */}
