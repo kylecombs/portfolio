@@ -1,12 +1,13 @@
 import React, { Fragment, useRef, useEffect, useState } from 'react';
-import { Sphere } from './components/Sphere.js';
+import { Sphere } from './components/Sphere';
 import Contact from './components/Contact';
-import SideMarquee from './components/SideMarquee.js';
-import LowerMarquee from './components/LowerMarquee.js';
-import Blob from './components/Blob.js';
-import Conway from './components/Conway.js';
+import SideMarquee from './components/SideMarquee';
+import LowerMarquee from './components/LowerMarquee';
+import Blob from './components/Blob';
+import Conway from './components/Conway';
 import TextReveal from './components/TextReveal';
-import RandomChar from './components/RandomChar.js';
+import RandomChar from './components/RandomChar';
+import Gif from './components/Gif';
 
 import './App.css';
 
@@ -55,16 +56,7 @@ const App = () => {
           <Blob height={parentHeight} width={parentWidth} />
         </div>
         <div className="box-six">
-          <img
-            alt="cat typing gif"
-            src="https://images6.fanpop.com/image/photos/37500000/Chi-typing-on-a-computer-chis-sweet-home-chis-new-address-37597964-320-240.gif"
-            style={{
-              gridArea: '1 / 1 / span 4 / span 3',
-              objectFit: 'cover',
-              width: '100%',
-              height: '100%',
-            }}
-          />
+          <Gif />
         </div>
         <div className="box-seven">
           <Conway />

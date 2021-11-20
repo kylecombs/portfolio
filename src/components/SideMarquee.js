@@ -7,7 +7,9 @@ const Marquee = () => {
         <div className="animation">
           <h1 id="side-marquee">
             {Array(50)
-              .fill(' Kyle Combs is a software engineer / musician / designer ')
+              .fill(
+                ' Kyle Combs is a software engineer / musician / designer / '
+              )
               .join(' ')}
           </h1>
         </div>
