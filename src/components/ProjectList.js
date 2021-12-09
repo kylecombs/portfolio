@@ -63,6 +63,22 @@ export default function ProjectList(props) {
       <h3 style={{ marginTop: '30px' }}>— Music</h3>
       <div
         className="project-div"
+        onMouseEnter={() => props.setHoverElement(1)}
+        onMouseLeave={() => props.setHoverElement(null)}
+      >
+        <a href="https://fmsynth.netlify.app/">
+          <h1
+            style={{
+              color: props.hoverElement === 4 ? '#' + props.color : 'black',
+            }}
+          >
+            FMsynth.js
+          </h1>
+        </a>
+      </div>
+      <hr />
+      <div
+        className="project-div"
         onMouseEnter={() => props.setHoverElement(4)}
         onMouseLeave={() => props.setHoverElement(null)}
       >
