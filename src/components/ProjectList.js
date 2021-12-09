@@ -63,7 +63,7 @@ export default function ProjectList(props) {
       <h3 style={{ marginTop: '30px' }}>— music</h3>
       <div
         className="project-div"
-        onMouseEnter={() => props.setHoverElement(1)}
+        onMouseEnter={() => props.setHoverElement(4)}
         onMouseLeave={() => props.setHoverElement(null)}
       >
         <a href="https://fmsynth.netlify.app/">
@@ -79,13 +79,13 @@ export default function ProjectList(props) {
       <hr />
       <div
         className="project-div"
-        onMouseEnter={() => props.setHoverElement(4)}
+        onMouseEnter={() => props.setHoverElement(5)}
         onMouseLeave={() => props.setHoverElement(null)}
       >
         <a href="https://soundcloud.com/senseinparallel">
           <h1
             style={{
-              color: props.hoverElement === 4 ? '#' + props.color : 'black',
+              color: props.hoverElement === 5 ? '#' + props.color : 'black',
             }}
           >
             Sense in Parallel
