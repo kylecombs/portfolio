@@ -60,7 +60,7 @@ export default function ProjectList(props) {
         </a>
       </div>
       <hr />
-      <h3 style={{ marginTop: '30px' }}>— Music</h3>
+      <h3 style={{ marginTop: '30px' }}>— music</h3>
       <div
         className="project-div"
         onMouseEnter={() => props.setHoverElement(1)}
